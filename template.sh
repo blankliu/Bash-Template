@@ -68,15 +68,15 @@ COLOR_RED="\e[00;31m"
 COLOR_YELLOW="\e[00;33m"
 
 function log_i() {
-    echo -e "Info : $*"
+    echo -e "Info : $*" >&2
 }
 
 function log_w() {
-    echo -e "${COLOR_YELLOW}Warn : $*${COLOR_DEFAULT}"
+    echo -e "${COLOR_YELLOW}Warn : $*${COLOR_DEFAULT}" >&2
 }
 
 function log_e() {
-    echo -e "${COLOR_RED}Error: $*${COLOR_DEFAULT}"
+    echo -e "${COLOR_RED}Error: $*${COLOR_DEFAULT}" >&2
 }
 
 function check_env() {
